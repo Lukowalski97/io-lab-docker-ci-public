@@ -2,6 +2,11 @@
 version: '3.0'
 services:
   web:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
     # TODO: build context, ports and redis dependency
     volumes:
       - .:/code
